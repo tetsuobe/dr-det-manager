@@ -38,3 +38,30 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+
+#brand {
+  color: $secondary-color;
+  font-weight: bold;
+  margin-left: 20px;
+  text-shadow: 0 1px 0 rgba($primary-color, 0.1), 0 0 30px rgba($primary-color, 0.125);
+  transition: all 0.2s linear 0s;
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+}
+.sidebar {
+  background: none repeat scroll 0 0 #fafafa;
+  padding: 32px 20px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-item {
+  width: 48%;
+}
