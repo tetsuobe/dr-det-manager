@@ -39,9 +39,8 @@ $det = new Det();
 				<li><a href="info.php" target="_blank"><i class="fi-wrench"></i> phpinfo</a></li>
 			</ul>
 			<ul class="left">
-				<li>
-					<a href="#" data-reveal-id="extensionsModal"><i class="fi-widget"></i> Extensions</a>
-				</li>
+				<li><a href="#" data-reveal-id="systemModal"><i class="fi-info"></i> SystemInfo</a></li>
+				<li><a href="#" data-reveal-id="extensionsModal"><i class="fi-widget"></i> Extensions</a></li>
 			</ul>
 		</section>
 	</nav>
@@ -160,11 +159,36 @@ $det = new Det();
 </section>
 
 <div id="extensionsModal" class="reveal-modal small" data-reveal>
+	<h3>Loaded extensions</h3>
 	<ul class="no-bullet threecolumns">
 		<?php foreach ($det->getExtensions() as $extension): ?>
 			<li><?php echo $extension; ?></li>
 		<?php endforeach; ?>
 	</ul>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="systemModal" class="reveal-modal small" data-reveal>
+	<h3>System information</h3>
+	<table>
+		<tbody>
+		<tr>
+			<td>OS</td>
+			<td><?php echo $det->getSystemInfo()->os;?></td>
+		</tr>
+		<tr>
+			<td>Apache</td>
+			<td><?php echo $det->getSystemInfo()->apache;?></td>
+		</tr>
+		<tr>
+			<td>PHP</td>
+			<td><?php echo $det->getSystemInfo()->php;?></td>
+		</tr>
+		<tr>
+			<td colspan="2"><?php echo $det->getSystemInfo()->uname;?></td>
+		</tr>
+		</tbody>
+	</table>
 	<a class="close-reveal-modal">&#215;</a>
 </div>
 

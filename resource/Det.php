@@ -65,6 +65,10 @@ class Det {
 		return $loaded_extensions;
 	}
 
+	public function getSystemInfo(){
+		return new DetSystemInformation();
+	}
+
 	private function decode($file){
 		$fileContent = file_get_contents(dirname(__FILE__).'/'.$file);
 		$data = json_decode($fileContent);
@@ -248,5 +252,20 @@ class DetLink {
 			default:
 				return '<a href="'.$link.'">'.$label.'</a>';
 		}
+	}
+}
+
+class DetSystemInformation {
+
+	public $os;
+	public $php;
+	public $apache;
+	public $uname;
+
+	public function __construct() {
+		$this->os = PHP_OS;
+		$this->php = phpversion();
+		$this->apache = apache_get_version();
+		$this->uname = php_uname();
 	}
 }
