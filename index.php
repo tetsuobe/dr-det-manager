@@ -8,11 +8,12 @@ $det = new Det();
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title><?php echo $det->getName(); ?></title>
+	<link rel="stylesheet" href="stylesheets/icons/foundation-icons.css"/>
 	<link rel="stylesheet" href="stylesheets/app.css"/>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-<div class="contain-to-grid">
+<div class="fixed">
 	<nav class="top-bar" data-topbar>
 		<ul class="title-area">
 			<li class="name">
@@ -35,6 +36,12 @@ $det = new Det();
 						</div>
 					</div>
 				</li>
+				<li><a href="info.php" target="_blank"><i class="fi-wrench"></i> phpinfo</a></li>
+			</ul>
+			<ul class="left">
+				<li>
+					<a href="#" data-reveal-id="extensionsModal"><i class="fi-widget"></i> Extensions</a>
+				</li>
 			</ul>
 		</section>
 	</nav>
@@ -44,13 +51,14 @@ $det = new Det();
 		</a>
 	</nav>
 </div>
+<br>
 <section>
 	<div class="row">
 		<div class="large-3 medium-4 columns">
 			<div class="hide-for-small">
 				<div class="sidebar">
 					<nav>
-						<ul class="side-nav">
+						<ul id="" class="side-nav">
 							<li class="heading">Products</li>
 							<?php
 							if ($det->containProducts()) {
@@ -85,7 +93,7 @@ $det = new Det();
 		</div>
 		<div class="large-9 medium-8 columns">
 			<?php foreach ($det->getProducts() as $product): ?>
-				<section class="panel products" id="p_<?php echo strtolower($product->name); ?>">
+				<section class="panel main" id="p_<?php echo strtolower($product->name); ?>">
 					<h2><?php echo $product->getName(); ?></h2>
 
 					<div class="flex-container">
@@ -121,13 +129,11 @@ $det = new Det();
 				</section>
 			<?php endforeach; ?>
 
-			<section class="panel contents">
-				<h2>Content</h2>
-				<?php foreach ($det->getContents() as $content): ?>
-
+			<?php foreach ($det->getContents() as $content): ?>
+				<section class="panel main" id="c_<?php echo strtolower($content->name); ?>">
+					<h2><?php echo $content->name; ?></h2>
 					<div class="flex-container">
 						<div class="flex-item">
-							<h4 id="c_<?php echo strtolower($content->name); ?>"><?php echo $content->name; ?></h4>
 							<table class="small-12">
 								<tbody>
 								<tr>
@@ -138,10 +144,10 @@ $det = new Det();
 							</table>
 						</div>
 					</div>
-				<?php endforeach; ?>
-			</section>
+				</section>
+			<?php endforeach; ?>
 
-			<section class="panel links" id="l_<?php echo strtolower($content->name); ?>">
+			<section class="panel main" id="links">
 				<h2 id="links">Links</h2>
 				<ul class="no-bullet">
 					<?php foreach ($det->getLinks() as $link): ?>
@@ -152,6 +158,15 @@ $det = new Det();
 		</div>
 	</div>
 </section>
+
+<div id="extensionsModal" class="reveal-modal small" data-reveal>
+	<ul class="no-bullet threecolumns">
+		<?php foreach ($det->getExtensions() as $extension): ?>
+			<li><?php echo $extension; ?></li>
+		<?php endforeach; ?>
+	</ul>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>

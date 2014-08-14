@@ -59,6 +59,12 @@ class Det {
 		return !empty($this->links);
 	}
 
+	public function getExtensions(){
+		$loaded_extensions = get_loaded_extensions();
+		sort($loaded_extensions);
+		return $loaded_extensions;
+	}
+
 	private function decode($file){
 		$fileContent = file_get_contents(dirname(__FILE__).'/'.$file);
 		$data = json_decode($fileContent);

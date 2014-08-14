@@ -1,0 +1,271 @@
+{
+    "name": "dr-det-mm",
+    "products": [
+        {
+            "name": "Rekenblokken",
+            "instances": [
+                {
+                    "name": "lms-rek-trunk",
+                    "version": "trunk",
+                    "links": {
+                        "app": "http://lms-rek-trunk.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-rek-trunk.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydp/projects/lms-rek/trunk",
+                        "bds": "",
+                        "content": "https://svn/content/Rekenblokken/branches/trunk"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-rek-int",
+                    "version": "2.4.4",
+                    "links": {
+                        "app": "http://lms-rek-int.dr-det-int.ydp.eu/",
+                        "fw": "http://lms-rek-int.dr-det-int.ydp.eu/webapp/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydp/projects/lms-rek/branches/2.4.4/",
+                        "bds": "",
+                        "content": "https://svn/content/Rekenblokken/branches/acc"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-rek-dev",
+                    "version": "2.4.4",
+                    "links": {
+                        "app": "http://lms-rek-dev.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-rek-dev.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms6-rek/build/dist/",
+                        "bds": {
+                            "name": "lms6-rek-DEV",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=53"
+                        },
+                        "content": "https://svn/content/Rekenblokken/branches/trunk"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-rek-stable",
+                    "version": "2.2.x",
+                    "links": {
+                        "app": "http://lms-rek-stable.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-rek-stable.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydp/projects/lms-rek/branches/2.2.x/",
+                        "bds": "",
+                        "content": "https://svn/content/Rekenblokken/branches/acc"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-rek-stable-build",
+                    "version": "2.1.3",
+                    "links": {
+                        "app": "http://lms-rek-stable-build.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-rek-dev.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms6-rek-stable/build/dist/",
+                        "bds": {
+                            "name": "lms6-rek-STABLE",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=237"
+                        },
+                        "content": "https://svn/content/Rekenblokken/branches/acc"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-rek-stable-dev",
+                    "version": "2.5.x",
+                    "links": {
+                        "app": "http://lms-rek-stable-dev.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-rek-stable-dev.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydp/projects/lms-rek/branches/2.5.x/",
+                        "bds": "",
+                        "content": "https://svn/content/Rekenblokken/branches/acc"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-rek-content",
+                    "version": "2.4.4",
+                    "links": {
+                        "app": "http://lms-rek-content.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-rek-content.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms6-rek-stable/build/dist/",
+                        "bds": {
+                            "name": "lms6-rek-STABLE",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=237"
+                        },
+                        "content": "https://svn/content/Rekenblokken/branches/trunk"
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "Responsive mockup",
+                    "version": "0.alfa",
+                    "links": "",
+                    "pages": [
+                        {
+                            "name": "Main",
+                            "url": "http://dr-det-mm/lms-rek-responsive/"
+                        },
+                        {
+                            "name": "Table",
+                            "url": "http://dr-det-mm/lms-rek-responsive/table.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MLO-PE",
+            "instances": [
+                {
+                    "name": "lms-pe-trunk",
+                    "version": "trunk",
+                    "links": {
+                        "app": "http://lms-pe-trunk.dr-det-mm.ydp.eu/ctrl.php/site/login/login",
+                        "fw": "http://lms-pe-trunk.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydp/projects/lmspe/trunk/webapp",
+                        "bds": "",
+                        "content": ""
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-pe-dev",
+                    "version": "10.0.x",
+                    "links": {
+                        "app": "http://lms-pe-dev.dr-det-mm.ydp.eu/ctrl.php/site/login/login",
+                        "fw": "http://lms-pe-dev.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms-pe-dev/build/dist",
+                        "bds": {
+                            "name": "lms-pe-DEV",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=645"
+                        },
+                        "content": ""
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-pe-stable",
+                    "version": "10.0.0",
+                    "links": {
+                        "app": "http://lms-pe-stable.dr-det-mm.ydp.eu/ctrl.php/site/login/login",
+                        "fw": "http://lms-pe-stable.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms-pe-stable/build/dist",
+                        "bds": {
+                            "name": "lms-pe-STABLE",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=443"
+                        },
+                        "content": ""
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-pe-content",
+                    "version": "10.0.0",
+                    "links": {
+                        "app": "http://lms-pe-content.dr-det-mm.ydp.eu/ctrl.php/site/login/login",
+                        "fw": "http://lms-pe-content.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms-pe-stable/build/dist",
+                        "bds": {
+                            "name": "lms-pe-STABLE",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=443"
+                        },
+                        "content": ""
+                    },
+                    "pages": ""
+                }
+            ]
+        },
+        {
+            "name": "Opole",
+            "display": "collapse",
+            "instances": [
+                {
+                    "name": "lms-opole",
+                    "version": "version trunk",
+                    "links": {
+                        "app": "http://opole.dr-det-mm.ydp.eu/trunk/webapp/ctrl.php/login/login",
+                        "fw": "http://opole.dr-det-mm.ydp.eu/trunk/webapp/ctrl.php/fw/modules",
+                        "svn": "http://svn.intranet.ydp/ydp/projects/lms-opole/trunk/webapp",
+                        "bds": "",
+                        "content": ""
+                    },
+                    "pages": ""
+                }
+            ]
+        },
+        {
+            "name": "MPP",
+            "display": "collapse",
+            "instances": [
+                {
+                    "name": "lms-mpp-trunk",
+                    "version": "trunk",
+                    "links": {
+                        "app": "http://lms-mpp-trunk.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-mpp-trunk.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydp/trunk/leoportal/lmsmpp",
+                        "bds": "",
+                        "content": ""
+                    },
+                    "pages": ""
+                },
+                {
+                    "name": "lms-mpp-dev",
+                    "version": "build",
+                    "links": {
+                        "app": "http://lms-mpp-dev.dr-det-mm.ydp.eu/ctrl.php/login/login",
+                        "fw": "http://lms-mpp-dev.dr-det-mm.ydp.eu/ctrl.php/fw",
+                        "svn": "http://svn.intranet.ydp/ydpdist/product/lms-mpp/build/dist",
+                        "bds": {
+                            "name": "lms-mpp",
+                            "url": "http://devin/bds/ctrl.php/site/portal/product?p=12"
+                        },
+                        "content": ""
+                    },
+                    "pages": ""
+                }
+            ]
+        }
+    ],
+    "contents": [
+        {
+            "name": "Rekenblokken",
+            "data": "http://dr-det-mm/data/Rekenblokkken/",
+            "svn": "https://svn/content/Rekenblokken"
+        },
+        {
+            "name": "MLO-PE",
+            "data": "http://dr-det-mm/data/mlo-pe/",
+            "svn": "http://192.168.20.191/svn/content/"
+        },
+        {
+            "name": "MPP",
+            "data": "http://dr-det-mm/data/mpp/",
+            "svn": ""
+
+        }
+    ],
+    "links": [
+        {
+            "name": "BDS",
+            "url": "http://devin/bds/ctrl.php/site/portal/products"
+        },
+        {
+            "name": "Monitor",
+            "url": "http://dev/monitor/ctrl.php/site/portal/products"
+        },
+        {
+            "name": "Wiki",
+            "url": "http://wiki.ydp.eu"
+        },
+        {
+            "name": "phpMyAdmin",
+            "url": "http://dr-det-mm/phpmyadmin/"
+        },
+        {
+            "name": "Binary Thinking :P",
+            "url": "http://blog.karolsojko.com/"
+        }
+    ]
+}
