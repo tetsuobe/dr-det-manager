@@ -5,6 +5,7 @@ $('.side-nav a').on('click',function(event){
     if($(elem).is(':visible')){
         return;
     }
+    $('html,body').animate({scrollTop: 0}, 100);
     $('.main').not($(elem)).slideUp('100', function(){
         $(elem).slideDown();
     });

@@ -17,7 +17,7 @@ $det = new Det();
 	<nav class="top-bar" data-topbar>
 		<ul class="title-area">
 			<li class="name">
-				<h1><a href="#" id="brand"><?php echo $det->getName(); ?></a></h1>
+				<h1><a href="#" id="brand"><?php echo $det->getName(); ?> <?php echo $det->getVersion(true);?></a></h1>
 			</li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -25,23 +25,14 @@ $det = new Det();
 
 		<section class="top-bar-section">
 			<ul class="right">
-				<!-- Search | has-form wrapper -->
-				<li class="has-form">
-					<div class="row collapse">
-						<div class="large-8 small-9 columns">
-							<input type="text" placeholder="Find Stuff">
-						</div>
-						<div class="large-4 small-3 columns">
-							<a class="button expand" href="#">Search</a>
-						</div>
-					</div>
-				</li>
-				<li><a href="info.php" target="_blank"><i class="fi-wrench"></i> phpinfo</a></li>
-			</ul>
-			<ul class="left">
 				<li><a href="#" data-reveal-id="systemModal"><i class="fi-info"></i> SystemInfo</a></li>
 				<li><a href="#" data-reveal-id="extensionsModal"><i class="fi-widget"></i> Extensions</a></li>
+				<?php $tools = $det->getTools();?>
+				<li><a href="<?php echo $tools['phpinfo'];?>" target="_blank"><i class="fi-wrench"></i> phpinfo</a></li>
+				<li><a href="<?php echo $tools['phpMyAdmin'];?>" target="_blank"><i class="fi-database"></i> phpMyAdmin</a></li>
 			</ul>
+<!--			<ul class="left">-->
+<!--			</ul>-->
 		</section>
 	</nav>
 	<nav class="tab-bar show-for-small">
@@ -63,7 +54,7 @@ $det = new Det();
 							if ($det->containProducts()) {
 								echo '<li class="divider-vertical"></li>';
 								foreach ($det->getProducts() as $product) {
-									echo '<li><a href="#p_' . strtolower($product->name) . '">' . $product->name . '</a></li>';
+									echo '<li><a href="#p_' . $product->getName(true) . '">' . $product->getName() . '</a></li>';
 								}
 							}
 							?>
@@ -92,7 +83,7 @@ $det = new Det();
 		</div>
 		<div class="large-9 medium-8 columns">
 			<?php foreach ($det->getProducts() as $product): ?>
-				<section class="panel main" id="p_<?php echo strtolower($product->name); ?>">
+				<section class="panel main" id="p_<?php echo $product->getName(true); ?>">
 					<h2><?php echo $product->getName(); ?></h2>
 
 					<div class="flex-container">

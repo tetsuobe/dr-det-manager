@@ -41,16 +41,10 @@
 
 
 #brand {
-  color: $secondary-color;
   font-weight: bold;
   margin-left: 20px;
-  text-shadow: 0 1px 0 rgba($primary-color, 0.1), 0 0 30px rgba($primary-color, 0.125);
-  transition: all 0.2s linear 0s;
-  &:hover {
-    color: $primary-color;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.4);
-  }
+  color: $primary-color;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.4);
 }
 .sidebar {
   background: none repeat scroll 0 0 #fafafa;
@@ -80,4 +74,12 @@
   -moz-column-count:3;
   -webkit-column-count:3;
   column-count:3;
+}
+
+.version {
+  @include label(
+    $padding:7px 4px 5px,
+    $radius:4px
+  );
+  margin-left: 5px;
 }

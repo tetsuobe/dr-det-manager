@@ -1,5 +1,10 @@
 {
     "name": "dr-det-mm",
+    "baseurl": "http://dr-det-mm",
+    "tools": {
+        "phpinfo": "info.php",
+        "phpMyAdmin": "phpmyadmin/"
+    },
     "products": [
         {
             "name": "Rekenblokken",
